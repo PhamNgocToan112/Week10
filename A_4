@@ -1,0 +1,29 @@
+
+#include <iostream>
+
+using namespace std;
+
+struct Point {
+    double x;
+    double y;
+
+    void Printf() {
+        cout << x << " " << y << endl;
+    }
+
+    Point(double _x, double _y) {
+        x = _x;
+        y = _y;
+    }   
+
+};
+
+
+int main() {
+    Point a = Point(2, 4);
+ 
+    cout << &a << " " << &a.x << " " << &a.y;
+    
+    
+    //địa chỉ của struct chính là địa chỉ của biến đầu tiên trong struct đươc khai báo
+}
