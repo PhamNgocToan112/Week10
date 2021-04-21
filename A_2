@@ -1,0 +1,38 @@
+
+#include <iostream>
+
+using namespace std;
+
+struct Point {
+    double x;
+    double y;
+
+    void Printf() {
+        cout << x << " " << y << endl;
+    }
+};
+
+void Test1(Point a) {
+    a.x = 3;
+    a.y = 2;
+}
+
+void Test2(Point* a) {
+    a->x = 3;
+    a->y = 2;
+}
+
+int main() {
+    Point a;
+
+    a.x = 2;
+    a.y = 3;
+
+    Test1(a);
+    a.Printf();
+
+    Test2(&a);
+    a.Printf();
+
+    
+}
