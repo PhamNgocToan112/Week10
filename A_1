@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+using namespace std;
+
+struct Point {
+    double x;
+    double y;
+
+    void Printf() {
+        cout << x << endl;
+        cout << y;
+    }
+};
+
+
+int main() {
+    Point a;
+
+    a.x = 2;
+    a.y = 3;
+
+    a.Printf();
+    
+}
