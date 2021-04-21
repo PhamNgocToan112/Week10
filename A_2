@@ -13,13 +13,13 @@ struct Point {
 };
 
 void Test1(Point a) {
-    a.x = 3;
-    a.y = 2;
+    cout << &a.x << " ";
+    cout << &a.y << endl;
 }
 
 void Test2(Point* a) {
-    a->x = 3;
-    a->y = 2;
+    cout << &a->x << " ";
+    cout << &a->y << endl;
 }
 
 int main() {
@@ -28,11 +28,9 @@ int main() {
     a.x = 2;
     a.y = 3;
 
+    cout << &a.x << " ";
+    cout << &a.y << endl;
     Test1(a);
-    a.Printf();
-
-    Test2(&a);
-    a.Printf();
-
-    
+   
+    Test2(&a);  
 }
