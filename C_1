@@ -1,0 +1,48 @@
+
+#include <iostream>
+
+using namespace std;
+
+struct String {
+    int n;
+    char* str = new char;
+
+    String(const char* s) {
+        n = 0;
+        int i = 0;
+        while (s[i] != '\0') {
+            ++i;
+            str[i] = s[i];
+        }
+        str[n] = '\0';
+        n = i;
+        
+    }
+    ~String() {
+        delete str;
+    }
+
+    void printf() {
+        cout << str;
+    }
+
+    void append(const char* g) {
+        int i = 0, j = 0;
+        while (g[i] != '\0')++i;
+        for ( ; j < i; j++) {
+            str[n + j] = g[j];
+        }
+        str[j] = '\0';
+    }
+
+
+
+};
+
+int main() {
+     String a("abcd");
+    a.printf();
+    a.append("efj");
+    a.printf();
+
+}
